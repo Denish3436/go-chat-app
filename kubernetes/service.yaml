@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-chat-app
+  labels:
+    app: go-chat-app
+spec:
+  ports:
+    - port: 8082
+      targetPort: 8082
+  selector:
+    app: go-chat-app
+`
