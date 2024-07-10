@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: go-chat-app
+  namespace: default
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/yourusername/go-chat-app.git
+    targetRevision: main
+    path: kubernetes
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+
