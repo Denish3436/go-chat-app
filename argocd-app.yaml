@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Denish3436/project-1.git
+    repoURL: https://github.com/Denish3436/go-chat-app.git
     targetRevision: main
     path: kubernetes
   destination:
@@ -15,4 +15,5 @@ spec:
   syncPolicy:
     automated:
       prune: true
+      selfHeal: true
 
